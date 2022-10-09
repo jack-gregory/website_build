@@ -1,0 +1,9 @@
+[submodule "content"]
+	path = content
+	url = https://github.com/jack-gregory/website_content.git
+[submodule "public"]
+	path = public
+	url = https://github.com/jack-gregory/jack-gregory.github.io.git
+[submodule "themes/hugo-apero"]
+	path = themes/hugo-apero
+	url = https://github.com/hugo-apero/hugo-apero.git
