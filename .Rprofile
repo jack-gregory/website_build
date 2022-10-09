@@ -16,7 +16,15 @@ options(
   # to disable knitting Rmd files on save, set this option to FALSE
   blogdown.knit.on_save = TRUE,
   # build .Rmd to .html (via Pandoc); to build to Markdown, set this option to 'markdown'
-  blogdown.method = 'html'
+  blogdown.method = 'html',
+  # set default extension of new posts; one of '.md' / '.Rmd' / '.Rmarkdown'
+  blogdown.ext = '.Rmarkdown',
+  # set the default author of new posts
+  blogdown.author = 'Jack Gregory',
+  #	set subdirectory under content/ for new posts
+  blogdown.subdir = "blog",
+  # set the publish dir for local preview
+  blogdown.publishDir = 'public'
 )
 
 # fix Hugo version
