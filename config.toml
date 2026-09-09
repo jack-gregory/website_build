@@ -1,6 +1,6 @@
 title     = "Jack Gregory"
 author    = "Jack Gregory"
-copyright = "© 2022 Jack Gregory"
+copyright = "© 2026 Jack Gregory"
 
 ## Website
 baseURL                     = "/"
@@ -9,7 +9,7 @@ languageCode                = "en"
 googleAnalytics             = "G-X2M61RSEHX"
 disqusShortname             = "" # see params.utterances to use utterances instead of Disqus
 paginate                    = 10
-footnoteReturnLinkContents  =  "&#8617;" # ↩
+footnoteReturnLinkContents  = "&#8617;" # ↩
 preserveTaxonomyNames       = true
 enableEmoji                 = true
 enableGitInfo               = true
@@ -17,7 +17,7 @@ enableGitInfo               = true
 ## Folder
 metaDataFormat  = "yaml"
 publishDir      = "public"
-ignoreFiles     = ["\\.Rmd$", "\\.Rmarkdown$", "_cache$", "\\.knit\\.md$", "\\.utf8\\.md$"]
+ignoreFiles     = ["\\.Rmd$", "\\.Rmarkdown$", "_cache$", "\\.knit\\.md$", "\\.utf8\\.md$", "\\.qmd$", "\\.ipynb$", "\\.py$"]
 
 [markup]
   defaultMarkdownHandler  = "goldmark"
@@ -100,6 +100,10 @@ ignoreFiles     = ["\\.Rmd$", "\\.Rmarkdown$", "_cache$", "\\.knit\\.md$", "\\.u
       icon      = "linkedin" # icon name without the 'fa-'
       icon_pack = "fab"
       url       = "https://www.linkedin.com/in/jackgregory/"
+  [[params.social]]
+      icon      = "google-scholar-square"
+      icon_pack = "ai"
+      url       = "https://scholar.google.com/citations?hl=en&user=swqolQMAAAAJ"
   [[params.social]]
       icon      = "orcid" # icon name without the 'fa-'
       icon_pack = "ai"
