@@ -1,3 +1,9 @@
+/* TOC depth control - default (depth 2) shows h2 + h3 only */
+nav[data-toc-depth="1"] ul ul { display: none; }
+nav[data-toc-depth="2"] ul ul ul { display: none; }
+nav[data-toc-depth="3"] ul ul ul ul { display: none; }
+nav[data-toc-depth="4"] ul ul ul ul ul { display: none; }
+
 /* noto-sans-display-regular - latin */
 /*@font-face {
   font-family: 'Noto Sans Display';
@@ -47,3 +53,4 @@
        url('../fonts/leckerli-one-v16-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
        url('../fonts/leckerli-one-v16-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
+

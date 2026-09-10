@@ -7,14 +7,25 @@
         {{ if .Params.subtitle }}<h4 class="f4 mt0 mb4 lh-title measure">{{ .Params.subtitle }}</h4>{{ end }}
         {{ if .Params.show_author_byline }}<p class="f6 measure lh-copy mv1">{{ if .Params.author }}By {{ .Params.author }}{{ end }}{{ with .Params.categories }} in{{ range . }} <a href="{{ "categories/" | absURL }}{{ . | urlize }}">{{ . }}</a> {{ end }}{{ end }}</p>{{ end }}
         {{ if .Params.show_post_date }}<p class="f7 db mv0 ttu">{{ .PublishDate.Format "January 2, 2006" }}</p>{{ end }}
-
       {{ if .Params.links }}
       <div class="ph0 pt5">
         {{ partial "shared/btn-links.html" . }}
       </div>
       {{ end }}
-
       </header>
+      {{ $headers := findRE "<h[2-6].*>" .Content }}
+      {{ $has_headers := ge (len $headers) 1 }}
+      {{ if and $has_headers .Params.toc }}
+      {{ $tocDepth := .Params.toc_depth | default 2 }}
+      <details open id="PageTableOfContents" class="mv4">
+        <summary><h2 class="mv0 f5 fw7 ttu tracked dib">{{ .Params.sidebar.text_contents_label | default "On this page" }}</h2></summary>
+        <div class="pl2 pr0 mh0">
+          <nav data-toc-depth="{{ $tocDepth }}">
+            {{ .TableOfContents }}
+          </nav>
+        </div>
+      </details>
+      {{ end }}
       <section class="post-body pt5 pb4">
         {{ .Content }}
         {{ .Scratch.Set "details" "closed" }}
