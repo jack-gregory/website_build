@@ -64,10 +64,11 @@ ignoreFiles     = ["\\.Rmd$", "\\.Rmarkdown$", "_cache$", "\\.knit\\.md$", "\\.u
   # use an embedded font-family
   # serif options: Fraunces / EB Garamond / Bitter
   # sans-serif options: Commissioner / Atkinson Hyperlegible / Metropolis
-  # custom (handwriting) options: Noto Sans Display / Permanent Marker / Gochi Hand / Leckerli One
+  # custom sans-serif options: Noto Sans Display
+  # custom handwriting options: Permanent Marker / Gochi Hand / Leckerli One
   # if you import your own fonts, name them here too
   customtextFontFamily    = "Noto Sans Display"
-  customheadingFontFamily = "Gochi Hand"
+  customheadingFontFamily = "Bitter"
   # alternatively, leave empty and select basic font options: sans-serif or serif
   # for more http://tachyons.io/docs/typography/font-family/
   textFontFamily          = "sans-serif"

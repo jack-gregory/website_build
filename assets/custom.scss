@@ -1,9 +1,14 @@
+/*------------------------*/
+/* Blog ToC Customisation */
 /* TOC depth control - default (depth 2) shows h2 + h3 only */
 nav[data-toc-depth="1"] ul ul { display: none; }
 nav[data-toc-depth="2"] ul ul ul { display: none; }
 nav[data-toc-depth="3"] ul ul ul ul { display: none; }
 nav[data-toc-depth="4"] ul ul ul ul ul { display: none; }
 
+
+/*------------------------*/
+/* Custom Font Families */
 /* noto-sans-display-regular - latin */
 /*@font-face {
   font-family: 'Noto Sans Display';
@@ -52,5 +57,29 @@ nav[data-toc-depth="4"] ul ul ul ul ul { display: none; }
   src: local(''),
        url('../fonts/leckerli-one-v16-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
        url('../fonts/leckerli-one-v16-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+
+/*------------------------*/
+/* Font Customisations */
+// Homepage hero title stays in Gochi Hand
+h1.f-subheadline-l {
+  font-family: "Gochi Hand";
+}
+
+// Homepage subtitle in Noto Sans Display
+h2.f5.fw7.mt0.mb4.ttu.tracked {
+  font-family: "Noto Sans Display";
+}
+
+// About page sidebar author name in Gochi Hand
+sidebar.about-sidebar h2.f-subheadline.f4-ns.fw6 {
+  font-family: "Gochi Hand";
+}
+
+// About sidebar role and link_list_label in Noto Sans Display, bold
+sidebar.about-sidebar h5.f-subheadline.f4.fw2.ttu.tracked {
+  font-family: "Noto Sans Display";
+  font-weight: bold;
 }
 
