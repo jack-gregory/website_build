@@ -26,7 +26,7 @@ ignoreFiles     = ["\\.Rmd$", "\\.Rmarkdown$", "_cache$", "\\.knit\\.md$", "\\.u
     hardwraps             = false 
   [markup.tableOfContents]
     startLevel            = 2
-    endLevel              = 2
+    endLevel              = 6
     ordered               = false
   [markup.highlight]
     style                 = "github" # one of: https://xyproto.github.io/splash/docs/
@@ -64,10 +64,11 @@ ignoreFiles     = ["\\.Rmd$", "\\.Rmarkdown$", "_cache$", "\\.knit\\.md$", "\\.u
   # use an embedded font-family
   # serif options: Fraunces / EB Garamond / Bitter
   # sans-serif options: Commissioner / Atkinson Hyperlegible / Metropolis
-  # custom (handwriting) options: Noto Sans Display / Permanent Marker / Gochi Hand / Leckerli One
+  # custom sans-serif options: Noto Sans Display
+  # custom handwriting options: Permanent Marker / Gochi Hand / Leckerli One
   # if you import your own fonts, name them here too
   customtextFontFamily    = "Noto Sans Display"
-  customheadingFontFamily = "Gochi Hand"
+  customheadingFontFamily = "Bitter"
   # alternatively, leave empty and select basic font options: sans-serif or serif
   # for more http://tachyons.io/docs/typography/font-family/
   textFontFamily          = "sans-serif"
@@ -150,18 +151,18 @@ ignoreFiles     = ["\\.Rmd$", "\\.Rmarkdown$", "_cache$", "\\.knit\\.md$", "\\.u
     title   = "Curriculum Vitae"
     url     = "/cv/"
     weight  = 6
-    
+  [[menu.header]]
+    name    = "Contact"
+    title   = "Contact Form"
+    url     = "/contact/"
+    weight  = 7
+
   # Configure footer  
   [[menu.footer]]
     name    = "License"
     title   = "License"
     url     = "/license/"
     weight  = 1
-  [[menu.footer]]
-    name    = "Contact"
-    title   = "Contact Form"
-    url     = "/contact/"
-    weight  = 2
 
 # see https://gohugo.io/about/hugo-and-gdpr/    
 [privacy]

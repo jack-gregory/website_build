@@ -22,6 +22,17 @@
 </main>
 <aside class="page-sidebar" role="complementary">
   {{ partial "shared/sidebar-scaffold.html" . }}
+  {{ $headers := findRE "<h[2-6].*>" .Content }}
+  {{ $has_headers := ge (len $headers) 1 }}
+  {{ if and $has_headers .Params.toc }}
+  {{ $tocDepth := .Params.toc_depth | default 2 }}
+  <div class="ph4 pb4">
+    <h2 class="mv3 f5 fw7 ttu tracked">{{ .Params.sidebar.text_contents_label | default "On this page" }}</h2>
+    <nav id="PageTableOfContents" aria-label="PageTableOfContents" data-toc-depth="{{ $tocDepth }}">
+      {{ .TableOfContents }}
+    </nav>
+  </div>
+  {{ end }}
   {{ .Scratch.Set "details" "open" }}
   {{ partial "shared/post-details.html" . }}
 </aside>
