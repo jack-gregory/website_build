@@ -1,0 +1,21 @@
+- slug: data-science
+  name: "Data Science"
+  description: "Applied methods for turning messy datasets into usable analysis."
+- slug: econometrics
+  name: "Econometrics"
+  description: "Applied statistical methods mainly for inference."
+- slug: electricity-modelling
+  name: "Electricity Modelling"
+  description: "Quantitative modelling of wholesale electricity markets."
+- slug: energy-environmental-economics
+  name: "Energy & Environmental Economics"
+  description: "Research on energy and environmental economics and policy."
+- slug: innovation
+  name: "Innovation"
+  description: "Innovation reasearch and measurement."
+- slug: regulation
+  name: "Regulation"
+  description: "Policy and regulation of utility services including electricity, gas, and water."
+- slug: web-development
+  name: "Web Development"
+  description: "Practical, step-by-step notes on building and maintaining this Hugo-Apéro site."

@@ -1,0 +1,27 @@
+{{ define "main" }}
+<main class="page-main pa4" role="main">
+  <section class="page-content mw7 center">
+    <article class="post-content pa0 ph4-l">
+      <header class="post-header">
+        <h1 class="f1 lh-solid measure-narrow mb3 fw4">Tags</h1>
+      </header>
+      <section class="post-body pt5 pb4">
+        {{ range site.Data.tags }}
+          <h2 class="f7 fw5 mt5 mb3">{{ .group }}</h2>
+          <ul class="list pl0 flex flex-wrap">
+            {{ range sort .terms }}
+              {{ $slug := . | urlize }}
+              {{ $count := 0 }}
+              {{ with index site.Taxonomies.tags $slug }}{{ $count = len . }}{{ end }}
+              <li class="mr3 mb3">
+                <a href="{{ "tags/" | absURL }}{{ $slug }}" class="f6 link dim{{ if eq $count 0 }} o-50{{ end }}">{{ . }}</a>
+                {{ if gt $count 0 }}<span class="f7 gray"> ({{ $count }})</span>{{ end }}
+              </li>
+            {{ end }}
+          </ul>
+        {{ end }}
+      </section>
+    </article>
+  </section>
+</main>
+{{ end }}
