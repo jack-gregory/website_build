@@ -159,10 +159,20 @@ ignoreFiles     = ["\\.Rmd$", "\\.Rmarkdown$", "_cache$", "\\.knit\\.md$", "\\.u
 
   # Configure footer  
   [[menu.footer]]
+    name    = "Categories"
+    title   = "Categories"
+    url     = "/categories/"
+    weight  = 1
+  [[menu.footer]]
+    name    = "Tags"
+    title   = "Tags"
+    url     = "/tags/"
+    weight  = 2
+  [[menu.footer]]
     name    = "License"
     title   = "License"
     url     = "/license/"
-    weight  = 1
+    weight  = 3
 
 # see https://gohugo.io/about/hugo-and-gdpr/    
 [privacy]
