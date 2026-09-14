@@ -1,0 +1,28 @@
+{{ define "main" }}
+<main class="page-main pa4" role="main">
+  <section class="page-content mw7 center">
+    <article class="post-content pa0 ph4-l">
+      <header class="post-header">
+        <h1 class="f1 lh-solid measure-narrow mb3 fw4">Categories</h1>
+      </header>
+      <section class="post-body pt5 pb4">
+        <ul class="list pl0">
+          {{ range .Data.Terms.Alphabetical }}
+            {{ $slug := .Name | urlize }}
+            {{ $entry := index (where site.Data.categories "slug" $slug) 0 }}
+            <li class="mv4">
+              <a href="{{ .Page.RelPermalink }}" class="f4 b link dim">
+                {{ with $entry }}{{ .name }}{{ else }}{{ .Name | humanize }}{{ end }}
+              </a>
+              <span class="f6 gray"> ({{ .Count }})</span>
+              <p class="f6 measure lh-copy mv1">
+                {{ with $entry }}{{ .description }}{{ else }}<em>No description yet — add one to data/categories.yaml.</em>{{ end }}
+              </p>
+            </li>
+          {{ end }}
+        </ul>
+      </section>
+    </article>
+  </section>
+</main>
+{{ end }}
